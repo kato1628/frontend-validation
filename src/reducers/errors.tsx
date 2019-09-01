@@ -9,6 +9,15 @@ const initialErrors: Errors = {};
 
 export const errors = (state = initialErrors, action: AppAction): Errors => {
   switch (action.type) {
+    case AppActionTypes.VALIDATION_FAILURE:
+      return {
+        ...state,
+        ...action.errors
+      };
+    case AppActionTypes.VALIDATION_SUCCESS:
+      const nextState = { ...state };
+      delete nextState[action.key];
+      return nextState;
     default:
       return state;
   }
