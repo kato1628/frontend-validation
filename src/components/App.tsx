@@ -2,8 +2,14 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Input, Button } from "semantic-ui-react";
+import {
+  AppPropsMappedFromState,
+  AppPropsMappedFromDispatch
+} from "../containers/AppContainer";
 
-const App: React.FC = () => {
+type AppProps = AppPropsMappedFromState & AppPropsMappedFromDispatch;
+
+const App: React.FC<AppProps> = ({ onChangeEmail }) => {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,6 +21,7 @@ const App: React.FC = () => {
             className="App-input"
             placeholder="Email"
             autoComplete="off"
+            onChange={onChangeEmail}
           />
           <Input
             type="password"
