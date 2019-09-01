@@ -1,8 +1,10 @@
-import email from "./email";
+import { email } from "./email";
+import { errors } from "./errors";
 import { combineReducers, Reducer, Action } from "redux";
 
 const reducer = combineReducers({
-  email
+  email,
+  errors
 });
 
 export default reducer;
