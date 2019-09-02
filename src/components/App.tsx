@@ -15,7 +15,7 @@ const App: React.FC<AppProps> = ({ errors, onChangeEmail }) => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Sign in</p>
-        <section>
+        <section className="App-section">
           <Input
             type="mail"
             className="App-input"
