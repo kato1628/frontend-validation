@@ -9,7 +9,7 @@ import {
 
 type AppProps = AppPropsMappedFromState & AppPropsMappedFromDispatch;
 
-const App: React.FC<AppProps> = ({ onChangeEmail }) => {
+const App: React.FC<AppProps> = ({ errors, onChangeEmail }) => {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +23,7 @@ const App: React.FC<AppProps> = ({ onChangeEmail }) => {
             autoComplete="off"
             onChange={onChangeEmail}
           />
+          <p className="App-p-error-message">{errors.email}</p>
           <Input
             type="password"
             className="App-input"

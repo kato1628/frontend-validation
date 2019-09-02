@@ -31,6 +31,14 @@
   display: block;
 }
 
+.App-p-error-message {
+  color: #df9797;
+  font-size: 0.6em;
+  text-align: left;
+  height: 12px;
+  line-height: 12px;
+}
+
 .App-button {
   width: 200px;
 }

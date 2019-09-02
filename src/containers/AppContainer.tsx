@@ -4,7 +4,9 @@ import { AppState } from "../reducers";
 import { AppThunkDispatch } from "../actions/thunkType";
 import { updateEmail } from "../actions/actions";
 
-const mapStateToProps = (state: AppState) => ({});
+const mapStateToProps = (state: AppState) => ({
+  errors: state.errors
+});
 
 const mapDispatchToProps = (dispatch: AppThunkDispatch) => ({
   onChangeEmail: (event: React.ChangeEvent<HTMLInputElement>) =>
