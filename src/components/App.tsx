@@ -17,7 +17,7 @@ const App: React.FC<AppProps> = ({ errors, onChangeEmail }) => {
         <p>Sign in</p>
         <section className="App-section">
           <Input
-            type="mail"
+            type="email"
             className="App-input"
             placeholder="Email"
             autoComplete="off"
