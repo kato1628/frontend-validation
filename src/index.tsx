@@ -8,8 +8,9 @@ import "semantic-ui-css/semantic.min.css";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
+import validator from "./middleware/validator";
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(reducer, applyMiddleware(thunk, validator));
 
 ReactDOM.render(
   <Provider store={store}>
